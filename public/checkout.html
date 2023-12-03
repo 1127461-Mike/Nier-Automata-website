@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nier Automata Checkout</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
+  
+</head>
+<body>
+  <header class="header">
+    <section class="header-container">
+      <h3>Nier: Automata - Webshop</h3>
+      <button class="hamburger">&#9776;</button>
+
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <img src="images/nierauto.png" alt="Logo">
+        </a>
+      
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="2b.html" class="nav-link">2b</a>
+        <a href="9s.html" class="nav-link">9S</a>
+        <a href="a2.html" class="nav-link">a2</a>
+        <a href="shop.html" class="nav-link">webshop</a>
+      </nav>
+    </section>
+    <section class="cart-container">
+      <button class="cart-button">Winkelmandje</button>
+      <section class="cart" id="cart">
+        <h2>Winkelmandje</h2>
+        <ul class="cart-items"></ul>
+        <p>Totaal: €<span class="cart-total">0</span></p>
+        <button class="checkout-button">Afrekenen</button>
+      </section>
+    </section>
+  </header>
+
+  <section class="checkout">
+    <h2>Je geselecteerde producten:</h2>
+    <ul class="selected-items"></ul>
+    <p>Totaal: €<span class="checkout-total">0</span></p>
+    <h2>Gegevens invullen:</h2>
+    <form class="checkout-form">
+      <label for="achternaam">Achternaam:</label>
+      <input type="text" id="achternaam" name="achternaam" required>
+      <label for="huisnummer">Huisnummer:</label>
+      <input type="text" id="huisnummer" name="huisnummer" required>
+      <label for="address">Adres:</label>
+      <input type="text" id="address" name="address" required>
+      <label for="postcode">Postcode:</label>
+      <input type="text" id="postcode" name="postcode" required>
+      <label for="stad">Stad:</label>
+      <input type="text" id="stad" name="stad" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <button type="submit">Bestelling plaatsen</button>
+    </form>
+  </section>
+  <footer class="footer">
+   
+    <p>© 2023 Nier: Automata Fan Site</p>
+    <p>bronnen : <a href="https://store.steampowered.com/app/524220/NieRAutomata/">steam</a>, <a href="https://nier.fandom.com/wiki/NIER_Wiki">Nier fandom</a></p>
+    
+     
+  </footer>
+    
+
+  <script src="js/checkout.js"></script>
+  <script src="js/shop.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

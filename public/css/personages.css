@@ -1,0 +1,50 @@
+/* 2b.html begint hier onder */
+.content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile, .gameplay {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .profile-text, .gameplay-text {
+    flex: 1;
+    padding-right: 1rem;
+    max-width: 600px;
+  }
+  
+  .profile-image  {
+    width: 50%;
+    max-width: 150px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 400px;
+  }
+  .gameplay-gif{
+    width: 50%;
+    max-width: 750px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 50px;
+  }
+  @media (max-width: 768px) {
+    .profile, .gameplay {
+      flex-direction: column;
+    }
+    .profile-image, .gameplay-gif {
+      width: 100%;
+      max-width: 100%;
+    }
+    h1 {
+      font-size: 24px;
+    }
+  
+    p {
+      font-size: 14px;
+      margin: 8px;
+    }
+  }
+  

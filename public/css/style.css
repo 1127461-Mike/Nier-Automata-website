@@ -1,0 +1,292 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+   background-image: linear-gradient(180deg, gray, #000000);
+    color: #f1f1f1;
+
+  }
+
+  .footer_personages {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1rem;
+  }
+
+
+
+
+  footer > p > a{
+    color: #fff;
+  }
+  /* Navigatie stijlen */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+/* logo */
+.header {
+  position: relative;
+}
+
+.logo {
+  position:absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  margin:30px;
+  vertical-align: middle;
+  
+}
+
+.logo img {
+  width: auto;
+  max-height: 70px;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    max-height: 30px;
+  }
+}
+
+
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  background-color: #fff;
+}
+
+/* Verberg navigatie en toon hamburger menu op kleinere schermen */
+@media screen and (max-width: 767px) {
+  .nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+  .summary-text {
+    margin-bottom: 50px;
+
+  }
+  /* Header-stijlen */
+  .header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  footer{
+    background-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  /* Main-content stijlen */
+  .main-content {
+    max-width: 1200px;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .game-background {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .character-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .character {
+    flex: 0 1 calc(33% - 2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .character img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  
+  .character:hover img {
+    transform: scale(1.1); /* Toegevoegde schaalvergroting bij hover */
+  }
+  /* Footer-stijlen */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 767px) {
+    .character-wrapper {
+      flex-direction: column;
+    }
+  
+    .character {
+      flex: 0 1 100%;
+      margin-bottom: 2rem;
+    }
+  }
+  
+
+/* Slider */
+.slider {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 0;
+  transform: translateY(0);
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 2px solid #fff;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.slide-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: static;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s;
+}
+
+.slide img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.slide p {
+  width: 100%;
+  padding: 0px;
+  white-space: normal;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slider-btn:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Added animation styles */
+.slide.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
